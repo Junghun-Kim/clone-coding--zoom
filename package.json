@@ -12,12 +12,15 @@
     "@babel/node": "^7.26.0",
     "@babel/preset-env": "^7.26.8",
     "@prettier/plugin-pug": "^3.2.1",
+    "@types/socket.io": "^3.0.1",
+    "@types/socket.io-client": "^1.4.36",
     "nodemon": "^3.1.9",
     "prettier": "^3.5.2"
   },
   "dependencies": {
     "express": "^4.21.2",
     "pug": "^3.0.3",
+    "socket.io": "^4.8.1",
     "ws": "^8.18.0"
   }
 }

@@ -55,4 +55,14 @@ socket.on("bye", (user) => {
   addMessage(`${user} left`);
 });
 
+socket.on("room_change", (rooms) => {
+  const roomList = welcome.querySelector("ul");
+  roomList.innerHTML = "";
+
+  rooms.forEach((room) => {
+    const li = document.createElement("li");
+    li.innerText = room;
+    roomList.append(li);
+  });
+});
 socket.on("new_message", addMessage);

@@ -23,7 +23,13 @@ wsServer.on("connection", (socket) => {
     socket.to(roomName).emit("offer", offer);
   });
   socket.on("answer", (answer, roomName) => {
+    console.log(`on answer: roomName: ${roomName}`);
     socket.to(roomName).emit("answer", answer);
+    console.log(`to emit - answer: ${answer}`);
+  });
+  socket.on("ice", (ice, roomName) => {
+    console.log(`on ice: roomName: ${roomName}`);
+    socket.to(roomName).emit("ice", ice);
   });
 });
 
